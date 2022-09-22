@@ -1,0 +1,80 @@
+/* ==UserStyle==
+@name           mathway.com - 7/24/2022, 7:05:24 PM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+@preprocessor less
+
+@var color main-color "Main color for everything to be based on. Also try #000005" #121212
+@var color border-color "Color to make borders" #ffffff
+@var number first-layer-brightness "How bright to make first level of brightness (0 - 100%)" [8, 0, 100, 1, "%"]
+@var number second-layer-brightness "brightness of second level of brightness (0 - 100%)" [12, 0, 100, 1, "%"]
+@var color accent-color "Color to make blue things/accent" #000033
+@var color brighter-accent-color "brighter accent color" #0000ff
+@var color main-text-color "Color to make majority of text." #ffffff
+==/UserStyle== */
+@-moz-document domain("mathway.com") {
+    /* Insert code here... */
+    #chat-area .cell, #keyboard, html, body {
+        background: @main-color
+    }
+    
+    #header #top-menu {
+        background-color: @main-color;
+        color: @main-text-color
+    }
+    
+    .kbContainer .kbRow .kbKeyContainer .kbKey.light, .kbContainer .kbRow .kbKeyContainer .kbKey.default, #editor .cell, #editor-tester, .mw-addimage:before, #did-you-mean #dym-container, .menu-container, #subjects-menu, .menu-container .menu-row.link, .menu-container .menu-row.link .menu-text, .ch-bubble-local .ch-bubble-border, .ch-bubble-remote .ch-bubble-border, .Explanation, #topics-inner {
+        background: @main-color;
+        color: @main-text-color
+    }
+    
+    .kbContainer .kbRow .kbKeyContainer .kbKey.default:hover, .kbContainer .kbRow .kbKeyContainer .kbKey.light:hover, .menu-container .menu-row.link:hover, .menu-container .menu-row.link .menu-text:hover {
+        background: @main-text-color;
+        color: @main-color
+    }
+    
+    .topics-single, .topics-more {
+        background: @main-color;
+        color: @main-text-color
+    }
+    
+    .topics-single:hover, .topics-more:hover {
+        color: @main-color
+    }
+    
+    .kbContainer .kbRow .kbKeyContainer .kbKey.dark {
+        background: @accent-color;
+        color: @main-text-color
+    }
+    
+    .kbContainer .kbRow .kbKeyContainer .kbKey.dark:hover {
+        background: @brighter-accent-color;
+    }
+    
+    .kbContainer .kbRow .kbKeyContainer .kbKey, #editor-tester, #did-you-mean #dym-container {
+        border: 2px solid @border-color
+    }
+    
+    #container {
+        background: none
+    }
+    
+    .mw-static-left #static-ad-right-alt {
+        display: none;
+    }
+    
+    .mw-static-left #container {
+        width: 100%
+    }
+    
+    .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #chat-area .cell, .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #drawer .cell {
+        width: 100%;
+        margin: 0
+    }
+    
+    .mw-static-left #drawer .cell, .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #chat-area .cell, .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #chat-area .cell, .mw-static-left #drawer .cell, .mw-static-left #drawer .cell {
+        max-width: none
+    }
+}
